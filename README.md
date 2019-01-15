@@ -1,6 +1,70 @@
 # AngularMaterial
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+# Installation of Material with Angular
+`ng add @angular/material`
+
+`ng generate @angular/material:materialNav --name myNav`
+
+`ng generate @angular/material:materialDashboard --name myDashboard`
+
+`ng generate @angular/material:materialTable -- name myTable`
+
+After that need to add
+
+`import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatChipsModule, MatOptionModule, MatGridListModule, MatProgressBarModule, MatSliderModule, MatSlideToggleModule, MatMenuModule, MatDialogModule, MatSnackBarModule, MatSelectModule, MatInputModule, MatSidenavModule, MatCardModule, MatIconModule, MatRadioModule, MatProgressSpinnerModule, MatTabsModule, MatListModule } from '@angular/material';`
+
+imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatButtonModule, 
+    MatCheckboxModule, 
+    MatToolbarModule, 
+    MatChipsModule,
+    MatOptionModule, 
+    MatGridListModule, 
+    MatProgressBarModule, 
+    MatSliderModule, 
+    MatSlideToggleModule, 
+    MatMenuModule, 
+    MatDialogModule, 
+    MatSnackBarModule, 
+    MatSelectModule, 
+    MatInputModule, 
+    MatSidenavModule, 
+    MatCardModule, 
+    MatIconModule, 
+    MatRadioModule, 
+    MatProgressSpinnerModule, 
+    MatTabsModule,
+    MatListModule
+  ],
+  exports: [BrowserAnimationsModule,
+    LayoutModule,
+    MatButtonModule, 
+    MatCheckboxModule, 
+    MatToolbarModule, 
+    MatChipsModule,
+    MatOptionModule, 
+    MatGridListModule, 
+    MatProgressBarModule, 
+    MatSliderModule, 
+    MatSlideToggleModule, 
+    MatMenuModule, 
+    MatDialogModule, 
+    MatSnackBarModule, 
+    MatSelectModule, 
+    MatInputModule, 
+    MatSidenavModule, 
+    MatCardModule, 
+    MatIconModule, 
+    MatRadioModule, 
+    MatProgressSpinnerModule, 
+    MatTabsModule,
+    MatListModule
+  ]
 
 ## Development server
 
