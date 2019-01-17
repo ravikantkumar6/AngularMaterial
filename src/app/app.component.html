@@ -1,35 +1,53 @@
 <mat-sidenav-container [class.m2app-dark]="isDarkTheme">
   <mat-card>
     <mat-card-content>
-      <h2>Tab Demo</h2>
+      <h2>Address</h2>
       <mat-tab-group>
-        <mat-tab label="Air Nomads">
+        <mat-tab label="Search Address">
           <mat-card>
             <mat-card-content>
               <mat-form-field>
-                <mat-icon matPrefix class="app-input-icon">account_box</mat-icon>
-                <input matInput placeholder="Air Nomads" />
+                <mat-select placeholder="Select Country" [(ngModel)]="selectedcountry" name="country" (ngModelChange)="onChangeCountry($event)">
+                  <mat-option *ngFor="let country of countries" [value]="country">{{ country }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-select placeholder="Select State" name="state" [disabled] = "allowSelectingState">
+                  <mat-option *ngFor="let state of states" [value]="state">{{ state }}
+                  </mat-option>
+                </mat-select>
               </mat-form-field>
             </mat-card-content>
           </mat-card>
         </mat-tab>
-        <mat-tab label="Water Tribe">
+        <mat-tab label="Add Country">
           <mat-card>
             <mat-card-content>
               <mat-form-field>
-                <mat-icon matPrefix class="app-input-icon">euro_symbol</mat-icon>
-                <input matInput placeholder="Water Tribe" type="text" [(ngModel)]="name" />
+                <!-- <mat-icon matPrefix class="app-input-icon">euro_symbol</mat-icon> -->
+                <input matInput placeholder="Enter Country Name" type="text" [(ngModel)]="countryName" />
               </mat-form-field>
+              <mat-toolbar-row>
+                <button mat-raised-button color="primary" class="app-sidebar-button" (click)="onAddCountry($event)">Add Country</button>
+              </mat-toolbar-row>
             </mat-card-content>
           </mat-card>
         </mat-tab>
-        <mat-tab label="Earth Kingdom">
+        <mat-tab label="Add State">
           <mat-card>
             <mat-card-content>
+                <mat-form-field>
+                    <mat-select placeholder="Select Country" [(ngModel)]="selectedcountry" name="country">
+                      <mat-option *ngFor="let country of countries" [value]="country">{{ country }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
               <mat-form-field>
-                <mat-icon matPrefix class="app-input-icon">motorcycle</mat-icon>
-                <input matInput placeholder="Earth Kingdom" type="text" [(ngModel)]="name" />
+                <!-- <mat-icon matPrefix class="app-input-icon">motorcycle</mat-icon>  (click)="onCreateServer($event)"-->
+                <input matInput placeholder="State Name" type="text" [(ngModel)]="stateName" />
               </mat-form-field>
+              <mat-toolbar-row>
+                  <button mat-raised-button color="primary" class="app-sidebar-button" (click)="onAddState($event)">Add State</button>
+                </mat-toolbar-row>
             </mat-card-content>
           </mat-card>
         </mat-tab>
@@ -38,5 +56,4 @@
   </mat-card>
   <p>Total :: {{name}} *{{price}}</p>
   <p>{{title}}</p>
-
 </mat-sidenav-container>
