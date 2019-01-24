@@ -7,13 +7,13 @@
           <mat-card>
             <mat-card-content>
               <mat-form-field>
-                <mat-select placeholder="Select Country" [(ngModel)]="selectedcountry" name="country" (ngModelChange)="onChangeCountry($event)">
-                  <mat-option *ngFor="let country of countries" [value]="country">{{ country }}</mat-option>
+                <mat-select placeholder="Select Country" [(ngModel)]="selectedcountry" name="country" (ngModelChange)="onChangeCountry($event)" (click)="onChangeCountry($event)">
+                  <mat-option *ngFor="let country of countries" [value]="country.id">{{ country.country }}</mat-option>
                 </mat-select>
               </mat-form-field>
               <mat-form-field>
                 <mat-select placeholder="Select State" name="state" [disabled] = "allowSelectingState">
-                  <mat-option *ngFor="let state of states" [value]="state">{{ state }}
+                  <mat-option *ngFor="let state of states" [value]="state">{{ state.state }}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
@@ -37,8 +37,8 @@
           <mat-card>
             <mat-card-content>
                 <mat-form-field>
-                    <mat-select placeholder="Select Country" [(ngModel)]="selectedcountry" name="country">
-                      <mat-option *ngFor="let country of countries" [value]="country">{{ country }}</mat-option>
+                    <mat-select placeholder="Select Country" [(ngModel)]="selectedcountry" name="country"  (click)="onChangeCountry($event)">
+                      <mat-option *ngFor="let country of countries" [value]="country.id">{{ country.country }}</mat-option>
                     </mat-select>
                   </mat-form-field>
               <mat-form-field>

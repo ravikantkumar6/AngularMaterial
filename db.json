@@ -1,0 +1,55 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "country": "India",
+      "states": [
+        {
+          "id": 1,
+          "state": "Karnataka"
+        },
+        {
+          "id": 2,
+          "state": "Bihar"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "country": "Nepal",
+      "states": [
+        {
+          "id": 1,
+          "state": "kathmandu"
+        },
+        {
+          "id": 2,
+          "state": "XYZ"
+        }
+      ]
+    },
+    {
+      "states": [
+        {
+          "id": 1,
+          "state": "Update1"
+        },
+        {
+          "id": 2,
+          "state": "Update2"
+        },
+        {
+          "id": 3,
+          "state": "update3"
+        }
+      ],
+      "id": "3",
+      "country": "Test"
+    },
+    {
+      "states": [],
+      "id": "4",
+      "country": "Bhutan"
+    }
+  ]
+}
